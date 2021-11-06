@@ -94,9 +94,9 @@ while True:
             cv2.line(resized, (xp + int(wp/2), 0), (xp + int(wp/2), rows), (0, 255, 0), 2)
             cv2.line(resized, (0, yp + int(hp/2)), (cols, yp + int(hp/2)), (0, 255, 0), 2)
             
-            if (xp+int(wp/2))-(cols/2)>10:
+            if (xp+int(wp/2))-(cols/2)>14:
                 gaze_left[i] =True
-            elif (xp+int(wp/2))-(cols/2)<-10:
+            elif (xp+int(wp/2))-(cols/2)<-14:
                 gaze_right[i] =True
             
             cv2.imshow("pupil"+str(i), erosion)
