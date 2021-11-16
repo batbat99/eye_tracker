@@ -10,6 +10,14 @@ python-versions = "*"
 test = ["codecov (>=2.0.5)", "coverage (>=4.2)", "flake8 (>=3.0.4)", "path.py (>=11.5.0)", "pytest (>=3.0.3)", "pytest-cov (>=2.4.0)", "pytest-runner (>=2.9)", "pytest-virtualenv (>=1.7.0)", "scikit-build (>=0.10.0)", "setuptools (>=28.0.0)", "virtualenv (>=15.0.3)", "wheel"]
 
 [[package]]
+name = "dlib"
+version = "19.22.1"
+description = "A toolkit for making real world machine learning and data analysis applications"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "numpy"
 version = "1.21.4"
 description = "NumPy is the fundamental package for array computing with Python."
@@ -31,7 +39,7 @@ numpy = ">=1.19.3"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "0cf17c334cc14284272a73a43237f53750c0491790800be71ad12c19d12edab4"
+content-hash = "e5d1f94a1f7f7df7880013e08cfe30697298de57ad64441b3ae9628e02187835"
 
 [metadata.files]
 cmake = [
@@ -51,6 +59,9 @@ cmake = [
     {file = "cmake-3.21.4-py2.py3-none-win32.whl", hash = "sha256:cb59e6add997e40af53e83288dd74b111732adb455548d52940b1ef1f6f43589"},
     {file = "cmake-3.21.4-py2.py3-none-win_amd64.whl", hash = "sha256:d7bbf5e3f7bedcb8ab7478c383739098af11170edad204659e6191ff95b960f4"},
     {file = "cmake-3.21.4.tar.gz", hash = "sha256:30fa5ed8a5ad66dcd263adb87f3ce3dc2d0ec0ac3958f5becff577e4b62cd065"},
+]
+dlib = [
+    {file = "dlib-19.22.1.tar.gz", hash = "sha256:77e943b40cc53e377d7fc683552d2337937f1111c46d7753105f594c3958163c"},
 ]
 numpy = [
     {file = "numpy-1.21.4-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:8890b3360f345e8360133bc078d2dacc2843b6ee6059b568781b15b97acbe39f"},
