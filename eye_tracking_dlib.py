@@ -29,6 +29,9 @@ while True:
 
         eyes = [[],[]]
 
+        gaze_left = [False,False]
+        gaze_right = [False,False]
+
         for b in range(4):
             x = shape.part(b).x
             y = shape.part(b).y
@@ -68,9 +71,22 @@ while True:
             cv2.rectangle(eye_frame, (xp, yp), (xp + wp, yp + hp), (255, 0, 0), 2)
             cv2.line(eye_frame, (xp + int(wp/2), 0), (xp + int(wp/2), rows), (0, 255, 0), 2)
             cv2.line(eye_frame, (0, yp + int(hp/2)), (cols, yp + int(hp/2)), (0, 255, 0), 2)
+
+            if (xp+int(wp/2))-(cols/2)>10:
+                gaze_left[e] =True
+            elif (xp+int(wp/2))-(cols/2)<-10:
+                gaze_right[e] =True
             
             cv2.imshow(str(e+1)+" pupil", dilation)
             cv2.imshow(str(e+1)+" eye", eye_frame)
+      
+        if gaze_left[0] and gaze_left[1]:
+            print("looking left")
+        elif gaze_right[0] and gaze_right[1]:
+            print("looking right")
+        else:
+            print("looking center")
+
     cv2.imshow("webcam", frame)
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
